@@ -124,8 +124,8 @@ class MsgNode {
     this.registry.registerComponent(MNpersistm);
     let bus = new MessageBus('MessageBus', this.registry);
     this.registry.registerComponent(bus);
-    let pe = new PolicyEngine('PolicyEngine', new NodejsCtx(this.registry));
-    this.registry.registerComponent(pe);
+    let policyEng = new PolicyEngine('PolicyEngine', new NodejsCtx(this.registry));
+    this.registry.registerComponent(policyEng);
     let sm = new SessionManager('mn:/session', this.registry);
     this.registry.registerComponent(sm);
     let alm = new AddressAllocationManager('domain://msg-node.' + this.registry.getDomain()  + '/address-allocation', this.registry);
