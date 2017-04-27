@@ -116,6 +116,7 @@ In a rule entry of a policy, the condition field represents the restriction unde
 | userRegistries | registries associated to the user        | List, a list of user registries          |
 | valueExpires   | valid duration of the entry in second    | Number, a valid integer. e.g., 3600     |
 | addrAllastMin  | number of address allocation requests from the same runtime in the last minute | Number, a valid integer. e.g., 60 |
+| hyperToRegister | name of the hyperty to be registered     | String, a valid name of hyperty. e.g., Connector |
 
 **Table 1:** Attributes
 

@@ -286,5 +286,12 @@ class Attributes {
         // todo: stores the mappings info of allocated address, runtime url, starting time, etc.
         return 0;
     }
+    hyperToRegister(msg, context, newValue = null) {
+        if (msg.body.value && msg.body.value.descriptor){
+            return msg.body.value.descriptor.split('/')[5];
+        } else {
+            return undefined;
+        }
+    }
 }
 module.exports = Attributes;
