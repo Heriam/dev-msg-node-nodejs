@@ -110,11 +110,12 @@ In a rule entry of a policy, the condition field represents the restriction unde
 | domainRegistry | registry url of the domain               | String, a valid url.                     |
 | port           | the port of the messaging node           | Number, a valid port number. e.g., 9090  |
 | useSSL         | true if using ssl                        | Boolean, true of false                   |
-| valueNumber    | number in the value field of message body | Number, a valid interger. e.g., 1        |
+| valueNumber    | number in the value field of message body | Number, a valid integer. e.g., 1        |
 | valueAllocated | allocated addresses in the value field   | List, a list of valid hyperty addresses  |
 | valueResources | requested resources                      | List, a list of requested resources. e.g., audio, video |
 | userRegistries | registries associated to the user        | List, a list of user registries          |
-| valueExpires   | valid duration of the entry in second    | Number, a valid interger. e.g., 3600     |
+| valueExpires   | valid duration of the entry in second    | Number, a valid integer. e.g., 3600     |
+| addrAllastMin  | number of address allocation requests from the same runtime in the last minute | Number, a valid integer. e.g., 60 |
 
 **Table 1:** Attributes
 

@@ -282,5 +282,9 @@ class Attributes {
             return undefined;
         }
     }
+    addrAllastMin(msg, context, newValue = null) {
+        // todo: stores the mappings info of allocated address, runtime url, starting time, etc.
+        return 0;
+    }
 }
 module.exports = Attributes;
