@@ -57,7 +57,7 @@ module.exports = {
   sslCertificate: process.env.sslCertificate || path.resolve(path.join(__dirname, '../../', '/') + '/server.crt'),
   sslPKey: process.env.sslPKey || path.resolve(path.join(__dirname, '../../', '/') + '/key.pem'),
   policyConfig: {
-      development: true,
+      development: false,
       defaultBehavior: false
   }
 };
