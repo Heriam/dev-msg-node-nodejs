@@ -282,5 +282,8 @@ class Attributes {
             return undefined;
         }
     }
+    bodyValue(msg, context, newValue = null) {
+        return msg.body.value;
+    }
 }
 module.exports = Attributes;

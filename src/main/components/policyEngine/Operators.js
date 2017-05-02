@@ -142,6 +142,13 @@ class Operators {
          * */
         return param.includes(value);
     }
+
+    exists(value, param, attribute = nulll) {
+        /**
+         * @param [boolean] true of false
+         * */
+        return (value !== undefined) === param;
+    }
 }
 
 module.exports = Operators;

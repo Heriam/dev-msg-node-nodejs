@@ -129,6 +129,7 @@ The type of operation to do to verify an attribute value against a given paramet
 | between  | Verifies if a given value (including time) is within a scope |
 | contains | Verifies if a given collection contains a value |
 | like     | Verifies if a given string fulfils a specific pattern using wildcards (one or more "*") |
+| exists   | Verifies if a given field is presented in the message header |
 
 **Table 2:** Operators
 
