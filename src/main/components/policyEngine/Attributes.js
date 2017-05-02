@@ -282,6 +282,17 @@ class Attributes {
             return undefined;
         }
     }
+    addrAllastMin(msg, context, newValue = null) {
+        // todo: stores the mappings info of allocated address, runtime url, starting time, etc.
+        return 0;
+    }
+    hyperToRegister(msg, context, newValue = null) {
+        if (msg.body.value && msg.body.value.descriptor){
+            return msg.body.value.descriptor.split('/')[5];
+        } else {
+            return undefined;
+        }
+    }
     bodyValue(msg, context, newValue = null) {
         return msg.body.value;
     }

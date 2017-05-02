@@ -42,9 +42,9 @@ class Condition {
                 }
                 // if the key is an attribute
                 else {
-                    key = this.context.isAttributed(key);
-                    if (key) {
-                        condition = new AttributeCondition(this.context, key, value);
+                    let _key = this.context.isAttributed(key);
+                    if (_key) {
+                        condition = new AttributeCondition(this.context, _key, value);
                     } else {
                         this.logger.error(`[${this.name}] unrecognized key when building condition: ${key}!`);
                     }
