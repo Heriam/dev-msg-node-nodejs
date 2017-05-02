@@ -90,8 +90,6 @@ class Attributes {
     srcUsername(msg, context, newValue = null){
         if (msg.body.identity !== undefined) {
             return msg.body.identity.userProfile.username;
-        } else if (msg.body.value && msg.body.value.user){
-            return getUserEmailFromURL(msg.body.value.user);
         } else if (msg.from.startsWith('hyperty://'|| msg.from.startsWith('runtime://'))){
             let infoList = context.policyEngine.pip.getRegistryCacheEntry(removePathFromURL(msg.from));
             if (infoList.length) {
@@ -286,9 +284,9 @@ class Attributes {
         // todo: stores the mappings info of allocated address, runtime url, starting time, etc.
         return 0;
     }
-    hyperToRegister(msg, context, newValue = null) {
+    valueDescriptor(msg, context, newValue = null) {
         if (msg.body.value && msg.body.value.descriptor){
-            return msg.body.value.descriptor.split('/')[5];
+            return msg.body.value.descriptor;
         } else {
             return undefined;
         }
@@ -297,8 +295,8 @@ class Attributes {
         return msg.body.value;
     }
     valueUserID(msg,context,newValue = null) {
-        if (msg.body.value && msg.body.value.userID){
-            return msg.body.value.userID;
+        if (msg.body.value){
+            return msg.body.value.userID || msg.body.value.user;
         } else {
             return undefined;
         }
