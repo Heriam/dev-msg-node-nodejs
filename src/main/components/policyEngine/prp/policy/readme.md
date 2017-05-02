@@ -118,7 +118,7 @@ In a rule entry of a policy, the condition field represents the restriction unde
 | addrAllastMin  | number of address allocation requests from the same runtime in the last minute | Number, a valid integer. e.g., 60 |
 | valueDescriptor | descriptor url of the registered hyperty | String, a valid descriptor url. e.g., hyperty-catalogue://catalogue.hjiang-rethink.com/.well-known/hyperty/Connector |
 | bodyValue      | value field of the body of the message   | Object, a valid map. e.g., {"number": 1} |
-| valueUserID    | userID of the value field in the msg body | String, a valid user url. e.g., user://gmail.com/chiang.zju |
+| valueUser    | userID of the value field in the msg body | String, a valid user url. e.g., user://gmail.com/chiang.zju |
 
 **Table 1:** Attributes
 

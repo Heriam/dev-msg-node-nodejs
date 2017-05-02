@@ -294,9 +294,18 @@ class Attributes {
     bodyValue(msg, context, newValue = null) {
         return msg.body.value;
     }
-    valueUserID(msg,context,newValue = null) {
+    valueUser(msg,context,newValue = null) {
         if (msg.body.value){
-            return msg.body.value.userID || msg.body.value.user;
+            if (msg.body.value.user) {
+                return msg.body.value.user;
+            } else {
+                for (let key in msg.body.value) {
+                    if (msg.body.value[key].userID){
+                        return msg.body.value[key].userID;
+                    }
+                }
+                return undefined;
+            }
         } else {
             return undefined;
         }
