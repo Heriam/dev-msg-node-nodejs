@@ -118,6 +118,7 @@ In a rule entry of a policy, the condition field represents the restriction unde
 | addrAllastMin  | number of address allocation requests from the same runtime in the last minute | Number, a valid integer. e.g., 60 |
 | hyperToRegister | name of the hyperty to be registered     | String, a valid name of hyperty. e.g., Connector |
 | bodyValue      | value field of the body of the message   | Object, a valid map. e.g., {"number": 1} |
+| valueUserID    | userID of the value field in the msg body | String, a valid user url. e.g., user://gmail.com/chiang.zju |
 
 **Table 1:** Attributes
 
@@ -216,15 +217,6 @@ However, there are also cases that we may need multiple constrains (operator-par
   }
   ```
 
-  Please note that we do not provide any further simplification for a complex expression that contains multiple operator-parameter pairs with *and* relationship having the same operator, i.e., there is no further simplified syntax for expression:
-
-  ```json
-  {
-    "<operator1>": "<parameter1>",
-    "<operator1>": "<parameter2>",
-    "<operator1>": "<parameter3>"
-  }
-  ```
 
 - *NOT Logic*:
 

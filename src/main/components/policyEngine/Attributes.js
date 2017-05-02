@@ -296,5 +296,12 @@ class Attributes {
     bodyValue(msg, context, newValue = null) {
         return msg.body.value;
     }
+    valueUserID(msg,context,newValue = null) {
+        if (msg.body.value && msg.body.value.userID){
+            return msg.body.value.userID;
+        } else {
+            return undefined;
+        }
+    }
 }
 module.exports = Attributes;
