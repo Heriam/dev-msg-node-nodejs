@@ -49,6 +49,14 @@ let msgTypes = {
         }
         return result;
     },
+    subscription:(msg)=>{
+        let result = fase;
+        let urlPattern = "/subscription";
+        if (msg.from.endsWith(urlPattern) || msg.to.endsWith(urlPattern)) {
+            result = true;
+        }
+        return result;
+    },
     dataSync:(msg)=>{
         let result = false;
         let urlPattern = "/sm";
